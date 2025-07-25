@@ -1,43 +1,32 @@
 /* header */
 div.head {
     width: 100%;
-    height: 100px;
+    height: 169px;
     background-color: #272727;
     position: fixed;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18%;
+    align-items: center;
 
-    div.h_logo {
-        width: 40%;
+    .h_logo {
         height: 100px;
-        position: relative;
-
-        img {
-            position: absolute;
-            right: 250px;
-            top: 48px;
-        }
+        margin-top: 10px;
     }
 
-    div.h_list {
-        width: 55%;
+    .h_list {
+        width: 90%;
         height: 100px;
-        position: relative;
 
         ul {
-            width: 100%;
-            height: 100px;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-evenly;
             align-items: center;
-            position: absolute;
-            right: 470px;
-            margin: -95px 0;
 
             li {
                 list-style: none;
-                border-left: solid #87A9B4 1px;
-                padding: 0 20px;
                 box-sizing: border-box;
                 transition: 0.3s all linear;
                 position: relative;
@@ -45,7 +34,6 @@ div.head {
                 a {
                     color: #87A9B4;
                     text-decoration: none;
-                    font-family: var(--fnt);
                     font-size: large;
 
                     &:hover {
@@ -61,8 +49,7 @@ div.head {
                     height: fit-content;
                     background-color: #272727;
                     position: absolute;
-                    right: 0px;
-                    top: 150px;
+                    right: -20px;
                     transition: 0.35s all linear;
                     transform: scaley(0);
                     transform-origin: top;
@@ -86,8 +73,7 @@ div.head {
                     height: fit-content;
                     background-color: #272727;
                     position: absolute;
-                    right: 0px;
-                    top: 150px;
+                    right: -20px;
                     transition: 0.35s all linear;
                     transform: scaley(0);
                     transform-origin: top;
@@ -111,8 +97,7 @@ div.head {
                     height: fit-content;
                     background-color: #272727;
                     position: absolute;
-                    right: 0px;
-                    top: 150px;
+                    right: -20px;
                     transition: 0.35s all linear;
                     transform: scaley(0);
                     transform-origin: top;
@@ -137,7 +122,6 @@ div.head {
                     background-color: #272727;
                     position: absolute;
                     right: -20px;
-                    top: 150px;
                     transition: 0.35s all linear;
                     transform: scaley(0);
                     transform-origin: top;
@@ -168,7 +152,7 @@ div.head>div.h_list>nav>ul>li:hover ul {
 
 div.bottom {
     position: relative;
-    top: 100px;
+    top: 170px;
     background-color: #E0E0E0;
     width: 100%;
     height: 395px;
@@ -176,8 +160,8 @@ div.bottom {
     justify-content: space-evenly;
 
     .container {
-        width: 60%;
-        height: 395px;
+        width: 100%;
+        height: inherit;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
@@ -214,7 +198,7 @@ div.warper {
     align-content: flex-start;
 
     .info {
-        width: 60%;
+        width: 80%;
         height: fit-content;
 
         .explain-t p {
@@ -244,16 +228,16 @@ div.warper {
 }
 
 div.m_tea {
-    width: 80%;
+    width: 100%;
     height: fit-content;
     display: flex;
     justify-content: space-evenly;
-    margin: 0 auto;
+    align-items: flex-start;
 
     .m_t_w {
         display: flex;
         justify-content: space-between;
-        width: 60%;
+        width: 80%;
 
         .m_t_r {
             position: relative;
@@ -293,8 +277,8 @@ div.m_tea {
                 flex-direction: row;
                 flex-wrap: nowrap;
                 justify-content: space-between;
+                align-items: center;
                 height: 55px;
-                line-height: 55px;
                 font-size: 20px;
                 border-bottom: #818588 1px solid;
 
@@ -332,7 +316,7 @@ div.m_tea {
         p {
             line-height: 30px;
             word-spacing: 10px;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
     }
@@ -391,6 +375,7 @@ div.m_tea {
 
 }
 
+
 .f_warper {
     width: 100%;
     height: 25px;
@@ -413,6 +398,7 @@ div.m_tea {
         flex-flow: row nowrap;
         justify-content: space-evenly;
         align-items: center;
+        margin: 0 auto;
 
         .f_1,
         .f_2,
@@ -429,6 +415,7 @@ div.m_tea {
             }
 
             .f_title {
+                width: 120px;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -580,46 +567,7 @@ div.m_tea {
     row-gap: 20px;
 
     p {
-        font-size: 20px;
-        color: #87A9B4;
-    }
-}
-
-/* go to first */
-.first {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, .4);
-    text-align: center;
-    position: fixed;
-    bottom: 30px;
-    left: 20px;
-    border-radius: 2px;
-    transition: all linear 0.3s;
-    text-decoration: none;
-
-    &:hover {
-        background-color: rgba(0, 0, 0, .6);
-    }
-
-    p {
-        position: relative;
-        line-height: 49px;
-        font-size: xx-large;
-        font-weight: bolder;
-        color: white;
-    }
-}
-
-.all {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 20px;
-
-    p {
-        font-size: 20px;
+        font-size: 18px;
         color: #87A9B4;
     }
 }
